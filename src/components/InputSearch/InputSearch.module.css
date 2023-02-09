@@ -1,0 +1,27 @@
+.search {
+  position: relative;
+  margin-left: 102px;
+  opacity: 1;
+}
+
+.search > svg {
+}
+
+.inputSearch {
+  width: 200px;
+  height: 24px;
+  border: none;
+  border-bottom: 1px solid #696764;
+  outline: none;
+  padding-left: 21px;
+  background-color: inherit;
+}
+
+.inputSearch ::placeholder {
+  opacity: 0.35;
+}
+
+.inputSearchIcon {
+  position: absolute;
+  top: 4px;
+}

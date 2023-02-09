@@ -1,0 +1,45 @@
+.burgerMenu {
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
+  position: fixed;
+  background-color: #241400;
+  opacity: 0.9;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding-top: 25px;
+  padding-right: 25px;
+  z-index: 2;
+}
+
+.burgerMenu > li {
+  color: white;
+  list-style: none;
+  text-align: right;
+  margin-top: 15px;
+}
+
+.burgerMenuOpenButton {
+  display: none;
+  font-size: 32px;
+  color: #241400;
+  cursor: pointer;
+}
+
+.burgerMenuCloseButton {
+  font-size: 32px;
+  color: white;
+  cursor: pointer;
+}
+
+@media (max-width: 1288px) {
+  .burgerMenuOpenButton {
+    display: block;
+  }
+
+  .menuList {
+    display: none;
+  }
+}

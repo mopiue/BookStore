@@ -1,0 +1,117 @@
+.header {
+  width: 100%;
+  height: 80px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.headerMenu {
+  margin-left: 70px;
+}
+
+.headerMenuList {
+  display: flex;
+  list-style: none;
+}
+
+.headerMenuItem {
+  margin-left: 21px;
+}
+
+.headerMenuLink {
+  text-decoration: none;
+  color: #241400;
+}
+
+/* .headerSearch {
+  position: relative;
+  margin-left: 102px;
+} */
+
+/* .headerSearchInput {
+  width: 200px;
+  height: 24px;
+  border: none;
+  border-bottom: 1px solid #696764;
+  outline: none;
+  padding-left: 21px;
+  background-color: inherit;
+}
+
+.headerSearch ::placeholder {
+  opacity: 0.35;
+}
+
+.headerSearchIcon {
+  position: absolute;
+  top: 4px;
+} */
+
+.headerActions {
+  display: flex;
+  gap: 10px;
+  margin-left: 102px;
+}
+
+.headerFavorites {
+  /* margin-right: 10px; */
+  cursor: pointer;
+}
+
+.headerCart {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.headerShoppingCart {
+  display: flex;
+  align-items: center;
+  margin-left: 9px;
+}
+
+.headerCartAmount {
+  font-weight: 500;
+}
+
+.headerCartArrow {
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-top: 4px solid #241400;
+  margin-left: 8px;
+}
+
+@media (max-width: 1288px) {
+  .headerMenu {
+    display: none;
+  }
+
+  .headerActions {
+    margin-left: 65px;
+  }
+
+  .headerFavorites > svg {
+    width: 25px;
+    height: 26px;
+  }
+
+  .headerCart > svg {
+    width: 25px;
+    height: 26px;
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    justify-content: space-between;
+  }
+
+  .headerSearch {
+    display: none;
+  }
+
+  .headerActions {
+    margin-left: 0;
+  }
+}
