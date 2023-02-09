@@ -1,0 +1,16 @@
+.menu {
+  margin-left: 70px;
+}
+
+.menuList {
+  display: flex;
+  list-style: none;
+}
+
+.menuItem {
+  margin-left: 21px;
+}
+
+.menuLink {
+  text-decoration: none;
+}

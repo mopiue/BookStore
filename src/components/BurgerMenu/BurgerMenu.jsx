@@ -1,9 +1,10 @@
 import { useState } from 'react'
 import InputSearch from '../InputSearch/InputSearch'
+import Menu from '../Menu/Menu'
 import styles from './BurgerMenu.module.css'
 import 'remixicon/fonts/remixicon.css'
 
-function BurgerMenu() {
+function BurgerMenu({ menuItems }) {
   const [menuOpen, setMenuOpen] = useState(false)
 
   return (
@@ -13,7 +14,7 @@ function BurgerMenu() {
         onClick={() => setMenuOpen(!menuOpen)}
       />
       {menuOpen && (
-        <ul className={styles.burgerMenu}>
+        <div className={styles.burger}>
           <i
             className={`ri-close-line ${styles.burgerMenuCloseButton}`}
             onClick={() => setMenuOpen(false)}
@@ -23,10 +24,14 @@ function BurgerMenu() {
             textColor="#FFFFFF"
             inputWidth="290px"
           />
-          <li>Menu item</li>
-          <li>Menu item</li>
-          <li>Menu item</li>
-        </ul>
+          <div className={styles.burgerMenu}>
+            <ul className={styles.burgerMenuList}>
+              <li className={styles.burgerMenuItem}>
+                <Menu menuItems={menuItems} textColor="#FFFFFF" />
+              </li>
+            </ul>
+          </div>
+        </div>
       )}
     </div>
   )

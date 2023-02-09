@@ -1,4 +1,4 @@
-.burgerMenu {
+.burger {
   display: flex;
   align-items: flex-end;
   flex-direction: column;
@@ -11,14 +11,6 @@
   bottom: 0;
   padding-top: 25px;
   padding-right: 25px;
-  z-index: 2;
-}
-
-.burgerMenu > li {
-  color: white;
-  list-style: none;
-  text-align: right;
-  margin-top: 15px;
 }
 
 .burgerMenuOpenButton {
@@ -32,6 +24,19 @@
   font-size: 32px;
   color: white;
   cursor: pointer;
+}
+
+.burgerMenuList {
+  list-style: none;
+}
+
+.burgerMenuItem {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  list-style: none;
+  text-align: right;
+  margin-top: 15px;
 }
 
 @media (max-width: 1288px) {

@@ -1,8 +1,13 @@
+import { useMediaQuery } from 'react-responsive'
+import Menu from '../Menu/Menu'
 import BurgerMenu from '../BurgerMenu/BurgerMenu'
 import InputSearch from '../InputSearch/InputSearch'
 import styles from './Header.module.css'
 
-function Header() {
+function Header({ menuItems }) {
+  const isTablet = useMediaQuery({ maxWidth: 767 })
+  const isContainer = useMediaQuery({ maxWidth: 1292 })
+
   return (
     <div className={styles.header}>
       <div className="header__logo">
@@ -15,33 +20,13 @@ function Header() {
       <nav className={styles.headerMenu}>
         <ul className={styles.headerMenuList}>
           <li className={styles.headerMenuItem}>
-            <a href="#catalog" className={styles.headerMenuLink}>
-              Акции
-            </a>
-          </li>
-          <li className={styles.headerMenuItem}>
-            <a href="#catalog" className={styles.headerMenuLink}>
-              Каталог
-            </a>
-          </li>
-          <li className={styles.headerMenuItem}>
-            <a href="#catalog" className={styles.headerMenuLink}>
-              Доставка
-            </a>
-          </li>
-          <li className={styles.headerMenuItem}>
-            <a href="#catalog" className={styles.headerMenuLink}>
-              О магазине
-            </a>
-          </li>
-          <li className={styles.headerMenuItem}>
-            <a href="#catalog" className={styles.headerMenuLink}>
-              Блог
-            </a>
+            {isContainer ? null : (
+              <Menu menuItems={menuItems} textColor="#241400" />
+            )}
           </li>
         </ul>
       </nav>
-      <InputSearch textColor="#241400" inputWidth="200px" />
+      {isTablet ? null : <InputSearch textColor="#241400" inputWidth="200px" />}
       <div className={styles.headerActions}>
         <div className={styles.headerFavorites}>
           <svg
@@ -87,7 +72,7 @@ function Header() {
           </div>
         </div>
       </div>
-      <BurgerMenu />
+      <BurgerMenu menuItems={menuItems} />
     </div>
   )
 }
